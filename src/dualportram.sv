@@ -33,7 +33,6 @@ module dualportram
 
   always_ff @(posedge clk_i) begin
     if(req1_i && we1_i) begin
-      $display("we wrint");
       if(be1_i[0]) ram[addr1][7:0] <= wdata1_i[7:0];
       if(be1_i[1]) ram[addr1][15:8] <= wdata1_i[15:8];
       if(be1_i[2]) ram[addr1][23:16] <= wdata1_i[23:16];
